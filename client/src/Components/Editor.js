@@ -1,0 +1,108 @@
+import CodeEditor from "@uiw/react-textarea-code-editor";
+import { useState } from "react";
+import { TiDelete } from "react-icons/ti";
+import { useContext } from "react";
+import { CreateNotesContext } from "../Providers/CreateNotesProvider";
+
+import "@wcj/dark-mode";
+
+const Editor = () => {
+  const { createNotes, setCreateNotes, tags, setTags, code, setCode } =
+    useContext(CreateNotesContext);
+
+  // const [code, setCode] = useState("");
+  const [dark, setDark] = useState(false);
+
+  var num = 0;
+  const handleClick = () => {
+    num++;
+    if (num % 2 == 0) {
+      setDark(false);
+    } else {
+      setDark(true);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key !== "Enter") return;
+    const value = e.target.value;
+    if (!value.trim()) return;
+    setTags([tags, value]);
+    e.target.value = "";
+  };
+
+  const removeTag = (index) => {
+    setTags(tags.filter((el, i) => i !== index));
+  };
+
+  // hello hello
+
+  const color = () => {
+    if (dark) {
+      return "#0F3D3E";
+    } else {
+      return "#E8F9FD";
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <div className="flex justify-between items-center px-3 h-12">
+          <div>
+            {" "}
+            <input
+              className="bg-black outline-none text-white focus:border-green-600 focus:border py-2 px-3 rounded-md "
+              type="text"
+              placeholder="Add a Tag"
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+          <div className="flex justify-start items-center text-white">
+            {tags.map((tag, index) => (
+              <div
+                className="flex justify-start items-center mx-1 py-2 px-3 rounded-md border border-green-700 text-xl font-light text-green-500"
+                key={index}
+              >
+                <span className="mr-1">{tag}</span>
+                <TiDelete
+                  onclick={() => removeTag(index)}
+                  className="text-2xl ml-1 "
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-8">
+          {" "}
+          <div className="my-2">
+            {" "}
+            <dark-mode
+              onclick={handleClick}
+              style={{ fontSize: 20 }}
+              dark="Dark"
+              permanent
+              light="Light"
+            ></dark-mode>
+          </div>
+          <CodeEditor
+            value={code}
+            language="cpp"
+            placeholder="Please enter your Notes."
+            onChange={(evn) => setCode(evn.target.value)}
+            padding={15}
+            style={{
+              fontSize: 20,
+              backgroundColor: { color },
+              fontFamily:
+                "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+            }}
+            className="w-[72rem] h-[25rem] rounded-xl border-green-500 border-2 mb-3"
+          />{" "}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Editor;
