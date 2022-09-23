@@ -1,7 +1,12 @@
 import React from "react";
+import ContestHeader from "../Components/ContestHeader";
 
 const Contest = () => {
-  return <div>helllo</div>;
+  return (
+    <div>
+      <ContestHeader />
+    </div>
+  );
 };
 
 export default Contest;
