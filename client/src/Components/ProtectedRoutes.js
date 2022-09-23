@@ -11,6 +11,7 @@ const ProtectedRoutes = (props) => {
     if (!isAuth) {
       navigate("/login");
     }
+    console.log("hello");
   }, [isAuth]);
   return (
     <div>
