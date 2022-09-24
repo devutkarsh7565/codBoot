@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AuthProvider from "./Providers/AuthProvider";
 import CreateNotesProvider from "./Providers/CreateNotesProvider";
 import FirestoreProvider from "./Providers/FirestoreProvider";
+import ContestProvider from "./Providers/ContestProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,7 +17,10 @@ root.render(
           {" "}
           <FirestoreProvider>
             {" "}
-            <App />
+            <ContestProvider>
+              {" "}
+              <App />
+            </ContestProvider>
           </FirestoreProvider>
         </CreateNotesProvider>
       </AuthProvider>

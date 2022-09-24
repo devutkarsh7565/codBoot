@@ -1,10 +1,10 @@
 import React from "react";
-import ContestHeader from "../Components/ContestHeader";
+import CompleteContest from "../Components/CompleteContest";
 
 const Contest = () => {
   return (
-    <div>
-      <ContestHeader />
+    <div className="w-full min-h-screen">
+      <CompleteContest />
     </div>
   );
 };

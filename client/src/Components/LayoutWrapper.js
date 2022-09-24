@@ -6,7 +6,7 @@ const LayoutWrapper = () => {
   return (
     <div>
       <div className="flex justify-center w-full bg-black  min-h-screen">
-        <div className="flex flex-col w-full max-w-6xl h-full items-center justify-start ">
+        <div className="flex flex-col max-w-7xl h-full items-center justify-start ">
           {/* <FirestoreProvider> */}
           <Navbar />
           <Outlet />

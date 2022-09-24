@@ -4,7 +4,7 @@ import { auth } from "../Hooks/firebase";
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
 
   const authContextValue = { isAuth, setIsAuth, auth };
   return (
