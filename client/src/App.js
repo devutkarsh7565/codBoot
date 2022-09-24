@@ -28,7 +28,9 @@ const App = () => {
           <Route
             path="/contest"
             element={<ProtectedRoutes Component={Contest} />}
-          />
+          >
+            <Route path=":contest" element={<IndividualNoteDetail />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
