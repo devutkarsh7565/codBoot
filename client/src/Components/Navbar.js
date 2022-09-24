@@ -33,8 +33,8 @@ const Navbar = () => {
   const { createNotes } = useContext(CreateNotesContext);
   return (
     <>
-      <nav className="sticky w-full top-0 z-10 md:flex justify-center  bg-black">
-        <div className="flex justify-center xl:w-[75rem] lg:w-[69rem] md:w-[70rem] items-center h-24 border-b border-green-500">
+      <nav className="sticky w-full top-0 z-10 md:flex justify-center ">
+        <div className="flex justify-center xl:w-[75rem] lg:w-[69rem] md:w-[70rem] bg-[#121418] items-center h-24 border-b border-green-500">
           <div className="flex justify-start items-center w-1/2 mx-10 text-4xl font-light text-white">
             Code<span className="text-[#22C55E]">X</span>
           </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             {isAuth ? (
               <button
-                className="font-Raleway text-sm font-semibold py-2 bg-green-700 border hover:border-green-600 hover:text-green-500  hover:bg-white  px-2 mx-1  text-[#f3efef]  duration-500"
+                className="font-Raleway text-sm font-semibold py-2 bg-green-600 border hover:border-green-600 hover:text-green-500  hover:bg-white  px-2 mx-1  text-[#f3efef]  duration-500"
                 //   onClick={handleUserLogOut}
               >
                 SignOut

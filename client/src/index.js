@@ -7,6 +7,7 @@ import AuthProvider from "./Providers/AuthProvider";
 import CreateNotesProvider from "./Providers/CreateNotesProvider";
 import FirestoreProvider from "./Providers/FirestoreProvider";
 import ContestProvider from "./Providers/ContestProvider";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +20,10 @@ root.render(
             {" "}
             <ContestProvider>
               {" "}
-              <App />
+              <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+                {" "}
+                <App />
+              </SkeletonTheme>
             </ContestProvider>
           </FirestoreProvider>
         </CreateNotesProvider>

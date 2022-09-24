@@ -1,4 +1,5 @@
 import React from "react";
+import LandingPageAbout from "../Components/LandingPageAbout";
 import LandingPageBanner from "../Components/LandingPageBanner";
 
 // import LandingPageNotesAndContestInfo from "../Components/LandingPageNotesAndContestInfo";
@@ -9,7 +10,7 @@ const Home = () => {
       <div className="min-h-screen ">
         {" "}
         <LandingPageBanner />
-        {/* <LandingPageNotesAndContestInfo /> */}
+        <LandingPageAbout />
       </div>
     </div>
   );

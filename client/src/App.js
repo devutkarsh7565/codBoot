@@ -18,7 +18,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="/createnotes/:question"
-            element={<ProtectedRoutes Component={CreateNote} />}
+            element={
+              <ProtectedRoutes
+                Component={CreateNote}
+                compRoute={"createnotes"}
+              />
+            }
           />
           {/* <Route path="/questions" element={<Questions />} /> */}
           <Route path="/notes" element={<ProtectedRoutes Component={Notes} />}>

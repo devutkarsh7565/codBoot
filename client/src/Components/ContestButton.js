@@ -8,9 +8,9 @@ const ContestButton = (props) => {
 
   const handleColor = () => {
     if (props.platformButton === props.platformRoute || platformName === text) {
-      return "green";
+      return "#1597BB";
     } else {
-      return "red";
+      return "#22C55E";
     }
   };
   return (
@@ -23,7 +23,7 @@ const ContestButton = (props) => {
             // props.setSearchMovie([]);
           }}
           style={{ backgroundColor: handleColor() }}
-          className=" md:text-base text-sm px-3 border-2 border-white rounded-xl py-2 md:px-5 text-black  md:mr-8 mr-3 hover:text-black top-0 left-0 transition ease-in-out delay-150 translate-y-0.5 sm:hover:-translate-x-1 hover:scale-110  duration-300 ... md:mb-8 mb-3  "
+          className=" md:text-base text-sm px-3 border border-white rounded-sm py-2 md:px-5 text-white  md:mr-8 mr-3 hover:text-white top-0 left-0 transition ease-in-out delay-150 translate-y-0.5 sm:hover:-translate-x-1 hover:scale-110  duration-300 ... md:mb-8 mb-3  "
         >
           {props.platformButton}
         </button>
