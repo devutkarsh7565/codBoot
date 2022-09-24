@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import useKontestApi from "../Hooks/useKontestApi";
 import groovyWalkAnimation from "../LottieFIles/loading.json";
 import Lottie from "lottie-react";
 import { useContext } from "react";
 import { ContestContext } from "../Providers/ContestProvider";
+import LoadingComponent from "./LoadingComponent";
 
 const ContestPlatform = () => {
   const [loading, setLoading] = useState(false);
@@ -35,16 +37,14 @@ const ContestPlatform = () => {
 
   if (loading)
     return (
-      <div className="flex justify-center w-full">
-        <div className="sm:h-[25rem] sm:w-[25rem]">
-          <Lottie
-            animationData={groovyWalkAnimation}
-            loop={true}
-            height={500}
-            width={500}
-          />
+      <>
+        <div className="flex flex-col justify-start items-center gap-10">
+          <LoadingComponent />
+          <LoadingComponent />
+          <LoadingComponent />
+          <LoadingComponent />
         </div>
-      </div>
+      </>
     );
   return (
     <div className="max-w-5xl min-h-screen ">
@@ -77,7 +77,10 @@ const ContestPlatform = () => {
               </div>
             </div>
             <div className="flex justify-center items-center gap-2 border  border-green-500 py-3 px-5">
-              <h1>COMPETE HERE</h1>
+              <a href={contest.url} target="_blank">
+                COMPETE HERE
+              </a>
+
               <MdOutlineKeyboardArrowRight className="text-xl" />
             </div>
           </div>

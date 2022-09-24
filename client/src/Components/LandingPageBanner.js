@@ -21,7 +21,7 @@ const LandingPageBanner = () => {
 
         <ScrollIntoView selector="#landingPage">
           <div className="">
-            <FaChevronDown className="animate-bounce mx-auto text-3xl dark:text-blue-500 text-green-500 " />
+            <FaChevronDown className="animate-bounce mx-auto text-3xl  text-green-500 " />
           </div>
         </ScrollIntoView>
       </div>
