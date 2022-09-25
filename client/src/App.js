@@ -18,22 +18,14 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route
             path="/createnotes/:question"
-            element={
-              <ProtectedRoutes
-                Component={CreateNote}
-                compRoute={"createnotes"}
-              />
-            }
+            element={<ProtectedRoutes Component={CreateNote} />}
           />
           {/* <Route path="/questions" element={<Questions />} /> */}
           <Route path="/notes" element={<ProtectedRoutes Component={Notes} />}>
             <Route path=":question" element={<IndividualNoteDetail />} />
           </Route>
           <Route path="/login" element={<Login />} />
-          <Route
-            path="/contest"
-            element={<ProtectedRoutes Component={Contest} />}
-          >
+          <Route path="/contest" element={<Contest />}>
             <Route path=":contest" element={<IndividualNoteDetail />} />
           </Route>
           <Route path="*" element={<Error />} />

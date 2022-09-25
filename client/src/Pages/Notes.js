@@ -68,10 +68,10 @@ const Notes = () => {
         </div>
       ) : (
         <div className="w-[72rem] flex flex-col justify-start items-center my-10">
-          <div className="flex justify-between items-center h-16 w-[68rem]">
+          <div className="flex justify-between items-center h-16 w-[68rem] py-5">
             <h1 className="text-green-500 text-6xl font-light">NOTES</h1>
             <input
-              className="px-3 py-2 text-xl font-light text-slate-400 border-green-500 border-2 outline-none mb-3"
+              className="px-3 py-2 text-xl bg-[#232429] font-light text-slate-400 border-green-500 border-2 outline-none mb-3"
               type="text"
               placeholder="Type to Search Question"
               value={input}
