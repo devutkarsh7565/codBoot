@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 const LayoutWrapper = () => {
   return (
     <div>
-      <div className="flex justify-center w-full bg-[#121418]  min-h-screen">
+      <div className="flex justify-center w-full bg-[#121418] dark:bg-[#efebfa] min-h-screen">
         <div className="flex flex-col max-w-7xl h-full items-center justify-start ">
           {/* <FirestoreProvider> */}
           <Navbar />

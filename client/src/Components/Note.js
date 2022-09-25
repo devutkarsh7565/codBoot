@@ -17,7 +17,7 @@ const Note = () => {
   return (
     <>
       {storeQuestion?.map((questions, index) => (
-        <div className="flex flex-col justify-start items-start w-[69rem] border border-green-500 h-40 rounded-md drop-shadow-lg shadow-green-500 my-4">
+        <div className="flex flex-col justify-start items-start w-[69rem] border border-green-500 h-40 rounded-md drop-shadow-lg shadow-green-500 mt-8 p-4">
           <div className="flex justify-around items-center w-full h-20  ">
             <div className="w-1/2 flex justify-start text-3xl px-3 text-white">
               {questions.name}
@@ -43,7 +43,7 @@ const Note = () => {
               </button>
             </div>
           </div>
-          <div className="flex items-center h-20 px-3 text-3xl text-green-500">
+          <div className="flex items-center h-20 px-3 text-2xl font-light text-green-500">
             {questions.group}
           </div>
         </div>

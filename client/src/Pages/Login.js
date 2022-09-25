@@ -74,7 +74,7 @@ const Login = () => {
                   src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                 />
               </div>
-              <p className="w-[141px] font-normal text-sm flex items-center pl-2 text-white cursor-pointer bg-green-500 hover:text-bg-green-500 hover:bg-[white] ">
+              <p className="w-[141px] font-normal text-sm flex items-center pl-2 text-white cursor-pointer bg-green-500 hover:text-bg-green-500 hover:bg-[white] hover:text-green-500 transition-all ">
                 <button
                   className="hover:text-green-500"
                   onClick={signUpWithGoogle}
