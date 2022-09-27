@@ -9,3 +9,24 @@
 .dark .active {
   color: #5924ed;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark > ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  background: #041c32;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #63e05c;
+}
+
+.dark > ::-webkit-scrollbar-thumb {
+  background: #5c88e0;
+}

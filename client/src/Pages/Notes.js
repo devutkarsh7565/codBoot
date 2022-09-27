@@ -7,9 +7,10 @@ import { Outlet, useOutlet } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import Note from "../Components/Note";
 import SearchQuery from "../Components/SearchQuery";
+import { DarkThemeContext } from "../Providers/DarkThemeProvider";
 
 const Notes = () => {
-  // const { question } = useParams();
+  const { isDarkMode } = useContext(DarkThemeContext);
   const [loading, setLoading] = useState(false);
   const { getNotesData, removeNotesData, editNotesData, getQueryData } =
     useFirestore();
@@ -24,7 +25,7 @@ const Notes = () => {
   } = useContext(FirestoreContext);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(false);
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -58,20 +59,32 @@ const Notes = () => {
     <>
       {loading ? (
         <div className="mt-20 pt-20">
-          <ClimbingBoxLoader
-            className="mt-20 pt-20"
-            color={"#22C55E"}
-            loading={loading}
-            // cssOverride={override}
-            size={90}
-          />
+          {isDarkMode ? (
+            <ClimbingBoxLoader
+              className="mt-20 pt-20"
+              color={"#0776F1"}
+              loading={loading}
+              // cssOverride={override}
+              size={90}
+            />
+          ) : (
+            <ClimbingBoxLoader
+              className="mt-20 pt-20"
+              color={"#22C55E"}
+              loading={loading}
+              // cssOverride={override}
+              size={90}
+            />
+          )}
         </div>
       ) : (
         <div className="w-[72rem] flex flex-col justify-start items-center my-10">
           <div className="flex justify-between items-center h-16 w-[68rem] py-5">
-            <h1 className="text-green-500 text-6xl font-light">NOTES</h1>
+            <h1 className="text-green-500 dark:text-blue-500 text-6xl font-light">
+              NOTES
+            </h1>
             <input
-              className="px-3 py-2 text-xl bg-[#232429] font-light text-slate-400 border-green-500 border-2 outline-none mb-3"
+              className="px-3 py-2 text-xl bg-[#232429] dark:bg-[#EFEBFA]  font-normal dark:text-slate-600 text-slate-400 dark:border-blue-500 border-green-500 border-2 outline-none mb-3"
               type="text"
               placeholder="Type to Search Question"
               value={input}

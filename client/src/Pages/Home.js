@@ -7,7 +7,7 @@ import LandingPageBanner from "../Components/LandingPageBanner";
 const Home = () => {
   return (
     <div>
-      <div className="min-h-screen ">
+      <div className="min-h-screen xl:w-[80rem] lg:[61rem] ">
         {" "}
         <LandingPageBanner />
         <LandingPageAbout />

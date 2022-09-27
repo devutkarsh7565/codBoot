@@ -64,7 +64,7 @@ const SavedEditor = () => {
           <div className="flex justify-start items-center text-white">
             {showStoreQuestion?.tags.map((tag, index) => (
               <div
-                className="flex justify-start items-center mx-1 py-2 px-3 rounded-md border border-green-700 text-xl font-light text-green-500"
+                className="flex justify-start items-center mx-1 py-2 px-3 rounded-md border-[2px] font-NavbarLink dark:text-blue-500 border-green-700 dark:border-blue-500 text-xl font-light text-green-500"
                 key={index}
               >
                 <span className="mr-1">{tag}</span>
