@@ -8,6 +8,7 @@ import CreateNotesProvider from "./Providers/CreateNotesProvider";
 import FirestoreProvider from "./Providers/FirestoreProvider";
 import ContestProvider from "./Providers/ContestProvider";
 import { SkeletonTheme } from "react-loading-skeleton";
+import DarkThemeProvider from "./Providers/DarkThemeProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,7 +23,9 @@ root.render(
               {" "}
               <SkeletonTheme baseColor="#313131" highlightColor="#525252">
                 {" "}
-                <App />
+                <DarkThemeProvider>
+                  <App />
+                </DarkThemeProvider>
               </SkeletonTheme>
             </ContestProvider>
           </FirestoreProvider>

@@ -3,15 +3,17 @@ import animationData from "../LottieFIles/LottieNotes.json";
 import contestData from "../LottieFIles/LottieContest.json";
 import lightThemeAnimationData from "../LottieFIles/lightThemeLandingPage1.json";
 import lightThemeContestData from "../LottieFIles/lightThemeLandingPage2.json";
-import useDarkTheme from "../Hooks/useDarkTheme";
+
+import { useContext } from "react";
+import { DarkThemeContext } from "../Providers/DarkThemeProvider";
 
 const LandingPageAbout = () => {
-  const { isDarkMode } = useDarkTheme();
+  const { isDarkMode } = useContext(DarkThemeContext);
   return (
     <>
       <div
         id="landingPage"
-        className="flex flex-col justify-start items-center xl:w-[75rem] lg:w-[65rem] my-8 py-8 "
+        className="flex flex-col justify-start gap-5 items-center min-h-screen w-full my-8 py-8 "
       >
         <h1 className="text-4xl text-white mt-16 dark:text-[#6F7684] pt-8">
           Why Use{" "}
@@ -19,31 +21,37 @@ const LandingPageAbout = () => {
             CodeX
           </span>{" "}
         </h1>
-        <div className="flex justify-between items-center text-white text-3xl w-[70rem] h-[24rem]">
-          <div className="w-[30rem] mx-5 ">
+        <div className="flex lg:justify-between  flex-wrap-reverse justify-center items-center text-white text-3xl w-full h-full">
+          <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5  flex items-center">
             <p className="dark:text-[#6F7684]">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
               voluptas autem corrupti fugiat esse animi iusto ipsam sit a
               labore?
             </p>
           </div>
-          <div className=" w-[35rem]">
+          <div className=" xl:w-[35rem] lg:w-[32rem] md:w-[22rem] w-full">
+            {/* {isDarkMode ? <h1>light</h1> : <h1>dark</h1>} */}
             {isDarkMode ? (
-              <Lottie animationData={animationData} loop={true} />
-            ) : (
               <Lottie animationData={lightThemeAnimationData} loop={true} />
+            ) : (
+              <Lottie animationData={animationData} loop={true} />
             )}
           </div>
         </div>
-        <div className="flex justify-between items-center text-white text-3xl w-full h-[24rem]">
-          <div className=" w-[30rem]">
+        <div className="flex lg:justify-between justify-center items-center gap-16 my-4 flex-wrap text-white text-3xl w-full h-full">
+          <div className="xl:w-[35rem] lg:w-[32rem] md:w-[22rem]">
+            {/* <Lottie animationData={contestData} loop={true} /> */}
             {isDarkMode ? (
-              <Lottie animationData={contestData} loop={true} />
+              <>
+                <Lottie animationData={lightThemeContestData} loop={true} />
+              </>
             ) : (
-              <Lottie animationData={lightThemeContestData} loop={true} />
+              <>
+                <Lottie animationData={contestData} loop={true} />
+              </>
             )}
           </div>
-          <div className="w-[30rem] mx-5 dark:text-[#6F7684]">
+          <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5 dark:text-[#6F7684]">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
               voluptas autem corrupti fugiat esse animi iusto ipsam sit a

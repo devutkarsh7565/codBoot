@@ -59,22 +59,27 @@ const CreateNote = () => {
     <>
       <div className="min-h-screen">
         <div className="flex flex-col items-start justify-start w-[72rem]">
-          <div className="text-green-500 text-3xl m-4 mt-8 ">
+          <div className="text-green-500 dark:text-blue-500 text-3xl m-4 mt-8 ">
             {createNotes?.group}
           </div>
-          <div className="text-white text-5xl m-4">
+          <div className="text-white dark:text-[#6F7684] text-5xl m-4">
             Problem Name - {createNotes?.name}
           </div>
           <div className="flex justify-start items-center m-4">
-            <h1 className="text-white text-2xl mx-2">Problem Link</h1>
-            <a href={createNotes?.url} className="text-green-500 text-3xl">
+            <h1 className="text-white dark:text-[#6F7684] text-2xl mx-2">
+              Problem Link
+            </h1>
+            <a
+              href={createNotes?.url}
+              className="text-green-500 text-3xl dark:text-blue-500"
+            >
               <BiLinkExternal />
             </a>
           </div>
           <div className="my-4 flex flex-col justify-start items-end">
             <Editor />
             <button
-              className="py-2 px-3 rounded-md text-green-500 border border-green-500 text-xl font-light mr-2 focus:bg-black"
+              className="py-2 px-3 rounded-md text-green-500 border-2 border-green-500 text-xl font-light mr-2 focus:bg-black dark:text-blue-500 dark:border-blue-500"
               onClick={() => {
                 storeQuestion();
                 // resetCreateNotesPage();

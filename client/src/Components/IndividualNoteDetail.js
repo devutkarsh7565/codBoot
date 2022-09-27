@@ -33,17 +33,20 @@ const IndividualNoteDetail = () => {
     <>
       <div className="min-h-screen">
         <div className="flex flex-col items-start justify-start w-[72rem]">
-          <div className="text-green-500 text-3xl m-4  ">
+          <div className="text-green-500 text-4xl m-4 dark:text-blue-500 font-NavbarLink ">
             {showStoreQuestion?.group}
           </div>
-          <div className="text-white text-5xl m-4">
+          <div className="text-white text-5xl dark:text-[#6F7684] font-NavbarLink m-4">
             Problem Name - {showStoreQuestion?.name}
           </div>
           <div className="flex justify-start items-center m-4">
-            <h1 className="text-white text-2xl mx-2">Problem Link</h1>
+            <h1 className="text-white text-3xl mx-2 dark:text-[#6F7684] font-NavbarLink">
+              Problem Link
+            </h1>
             <a
               href={showStoreQuestion?.url}
-              className="text-green-500 text-3xl"
+              target="_blank"
+              className="text-green-500 dark:text-blue-500 text-3xl"
             >
               <BiLinkExternal />
             </a>
@@ -52,7 +55,7 @@ const IndividualNoteDetail = () => {
             <SavedEditor />
             {edit ? (
               <button
-                className="py-2 px-3 rounded-md text-green-500 border border-green-500 text-xl font-light mr-2 focus:bg-black"
+                className="py-2 px-3 rounded-md  dark:text-blue-500 font-NavbarLink dark:border-blue-500 text-green-500 border-[2px] border-green-500 text-xl font-light mr-2 dark:focus:bg-blue-500 dark:focus:text-white focus:bg-black"
                 onClick={() => {
                   handleSave(showStoreQuestion);
                   // handleNavigate();
@@ -62,7 +65,7 @@ const IndividualNoteDetail = () => {
               </button>
             ) : (
               <button
-                className="py-2 px-3 rounded-md text-green-500 border border-green-500 text-xl font-light mr-2 focus:bg-black"
+                className="py-2 px-3 rounded-md dark:text-blue-500 font-NavbarLink dark:border-blue-500  text-green-500 border-[2px] border-green-500 text-xl font-light mr-2 focus:bg-black"
                 onClick={() => {
                   handleEdit();
                   // handleNavigate();

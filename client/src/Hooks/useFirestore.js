@@ -79,7 +79,7 @@ const useFirestore = () => {
       collection(db, "users", auth.currentUser?.uid, "questions")
     );
     const favList = [];
-    querySnapshot.forEach((doc) => {
+    querySnapshot?.forEach((doc) => {
       favList.push({ ...doc.data(), id: doc.id });
     });
     setStoreQuestion(favList);
