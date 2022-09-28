@@ -5,7 +5,7 @@ import ContestButton from "./ContestButton";
 const ContestButtonList = ({ contestApi }) => {
   const { contestsName } = useContestButton();
   return (
-    <div className="max-w-6xl h-20 flex justify-evenly items-center p-5">
+    <div className="w-full lg:h-20 flex lg:justify-evenly justify-start md:gap-0 gap-2 flex-wrap lg:flex-nowrap items-center lg:p-5 py-3 sm:px-1 pl-4 ">
       {contestsName.map((platform) => (
         <ContestButton
           platformRoute={contestApi}

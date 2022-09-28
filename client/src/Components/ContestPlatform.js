@@ -38,7 +38,7 @@ const ContestPlatform = () => {
   if (loading)
     return (
       <>
-        <div className="flex flex-col justify-start items-center gap-10">
+        <div className="w-full flex flex-col justify-start items-center gap-10">
           <LoadingComponent />
           <LoadingComponent />
           <LoadingComponent />
@@ -47,17 +47,17 @@ const ContestPlatform = () => {
       </>
     );
   return (
-    <div className="max-w-5xl min-h-screen ">
+    <div className="w-full lg:max-w-4xl min-h-screen md:my-2 my-5 ">
       <div className="w-full h-full flex flex-col justify-start items-center gap-10 ">
         {allContestList?.map((contest) => (
-          <div className="flex jusitify-between items-center gap-6 p-5 w-full border-[2px] border-green-500 font-NavbarLink dark:border-blue-500 rounded-md text-white">
-            <div className="flex justify-start items-center gap-6 p-5 w-[615px] max-h-[155px]">
+          <div className="flex jusitify-between items-center  md:gap-6 sm:p-5 p-3 w-[370px] sm:w-full  border-[2px] border-green-500 font-NavbarLink dark:border-blue-500 rounded-md text-white">
+            <div className="flex justify-start items-center sm:gap-6 gap-1 sm:p-5  md:w-[615px] sm:w-[375px] w-[300px] max-h-[155px]">
               {" "}
-              <div className="flex flex-col justify-start items-center gap-3 px-2 py-3  mx-3 w-[90px]">
+              <div className="flex flex-col justify-start items-center gap-3 px-2 py-3  mx-3 sm:w-[90px] w-[50px] ">
                 <h1 className="text-sm font-light w-full dark:text-[#6F7684]">
                   STARTS ON
                 </h1>
-                <div className="flex flex-col justify-start items-center text-xl font-medium w-full">
+                <div className="flex flex-col justify-start items-center sm:text-xl text-normal md:font-medium font-light w-full">
                   {" "}
                   <span className="dark:text-[#6F7684]">
                     {contest?.startTime?.match(day)?.slice(0, 1)}
@@ -65,8 +65,10 @@ const ContestPlatform = () => {
                   <span className="dark:text-[#6F7684]">May</span>
                 </div>
               </div>
-              <div className="flex flex-col justify-start items-start gap-3 pl-6 pr-3 py-3  border-l-[2px] border-green-500 dark:border-blue-500 mx-1 max-w-[550px]">
-                <h1 className="text-2xl dark:text-[#6F7684]">{contest.name}</h1>
+              <div className="flex flex-col justify-start items-start gap-3 md:pl-6 pl-3 pr-1 sm:pr-3 py-3  border-l-[2px] border-green-500 dark:border-blue-500 mx-1 max-w-[550px]">
+                <h1 className="md:text-2xl sm:text-xl dark:text-[#6F7684]">
+                  {contest.name}
+                </h1>
                 <div className="flex justify-start items-center gap-2 dark:text-[#6F7684]">
                   <span className="">Contest</span>
                   <span>|</span>
@@ -80,12 +82,16 @@ const ContestPlatform = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center items-center gap-2 border-[2px] dark:border-blue-500 dark:text-[#6F7684]  border-green-500 py-3 px-5">
-              <a href={contest.url} target="_blank">
+            <div className="flex justify-center items-center md:gap-2 border-[2px] dark:border-blue-500 dark:text-[#6F7684]  border-green-500 md:text-normal text-sm md:py-3 md:px-5 px-2 py-2">
+              <a
+                className="md:text-normal text-sm"
+                href={contest.url}
+                target="_blank"
+              >
                 COMPETE HERE
               </a>
 
-              <MdOutlineKeyboardArrowRight className="text-xl" />
+              <MdOutlineKeyboardArrowRight className="sm:text-xl sm:block hidden" />
             </div>
           </div>
         ))}
