@@ -47,9 +47,9 @@ const Editor = () => {
 
   return (
     <>
-      <div>
-        <div className="flex justify-between items-center px-3 h-12">
-          <div>
+      <div className="w-full">
+        <div className="flex justify-between items-center px-3 h-12 w-full">
+          <div className="sm:w-1/2 w-full">
             {" "}
             <input
               className="bg-black dark:bg-[#EFEBFA] dark:border-2 outline-none text-white dark:focus:border-blue-500 focus:border-green-600 border border-[#787878] focus:border py-2 px-3 rounded-md "
@@ -58,7 +58,7 @@ const Editor = () => {
               onKeyDown={handleKeyDown}
             />
           </div>
-          <div className="flex justify-start items-center text-white">
+          <div className="flex justify-start items-center text-white sm:w-1/2 w-full">
             {tags.map((tag, index) => (
               <div
                 className="flex justify-start items-center mx-1 py-2 px-3 rounded-md border-2 border-green-700 dark:border-blue-600  text-xl font-light text-green-500 dark:text-blue-500"
@@ -97,7 +97,7 @@ const Editor = () => {
               fontFamily:
                 "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
             }}
-            className="w-[72rem] h-[25rem] rounded-xl border-green-500 border-2 mb-3"
+            className="w-full h-[25rem] rounded-xl border-green-500 border-2 mb-3"
           />{" "}
         </div>
       </div>

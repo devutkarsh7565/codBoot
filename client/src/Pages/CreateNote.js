@@ -8,6 +8,7 @@ import Editor from "../Components/Editor";
 import useFirestore from "../Hooks/useFirestore";
 
 import { useNavigate } from "react-router-dom";
+import AboutCreateNotesPage from "../Components/AboutCreateNotesPage";
 
 const CreateNote = () => {
   const { addNotesData } = useFirestore();
@@ -51,14 +52,14 @@ const CreateNote = () => {
   if (createNotes === null) {
     return (
       <>
-        <h1 className="text-white">click to plus button</h1>
+        <AboutCreateNotesPage />
       </>
     );
   }
   return (
     <>
-      <div className="min-h-screen">
-        <div className="flex flex-col items-start justify-start w-[72rem]">
+      <div className="xl:w-[1280px] lg:w-[62rem] md:w-[47rem] sm:w-[40rem] xs:w-[32rem] w-[23rem] min-h-screen">
+        <div className="flex flex-col items-start justify-start w-full">
           <div className="text-green-500 dark:text-blue-500 text-3xl m-4 mt-8 ">
             {createNotes?.group}
           </div>
@@ -76,7 +77,7 @@ const CreateNote = () => {
               <BiLinkExternal />
             </a>
           </div>
-          <div className="my-4 flex flex-col justify-start items-end">
+          <div className="w-full my-4 flex flex-col justify-start items-end">
             <Editor />
             <button
               className="py-2 px-3 rounded-md text-green-500 border-2 border-green-500 text-xl font-light mr-2 focus:bg-black dark:text-blue-500 dark:border-blue-500"
