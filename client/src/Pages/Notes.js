@@ -25,7 +25,7 @@ const Notes = () => {
   } = useContext(FirestoreContext);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(false);
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -78,13 +78,13 @@ const Notes = () => {
           )}
         </div>
       ) : (
-        <div className="w-[72rem] flex flex-col justify-start items-center my-10">
-          <div className="flex justify-between items-center h-16 w-[68rem] py-5">
-            <h1 className="text-green-500 dark:text-blue-500 text-6xl font-light">
+        <div className="xl:w-[1280px] lg:w-[62rem] md:w-[47rem] sm:w-[40rem] xs:w-[28rem] w-[23rem] flex flex-col justify-start items-center my-10">
+          <div className="flex sm:justify-between justify-center sm:gap-0 gap-10 items-center h-16 w-full py-5">
+            <h1 className="text-green-500 dark:text-blue-500 md:text-6xl sm:text-5xl xs:text-4xl text-3xl font-light">
               NOTES
             </h1>
             <input
-              className="px-3 py-2 text-xl bg-[#232429] dark:bg-[#EFEBFA]  font-normal dark:text-slate-600 text-slate-400 dark:border-blue-500 border-green-500 border-2 outline-none mb-3"
+              className="sm:px-3 px-2 sm:w-[325px] xs:w-[275px] w-[250px] py-1 sm:py-2 md:text-xl text-lg bg-[#232429] dark:bg-[#EFEBFA]  font-normal dark:text-slate-600 text-slate-400 dark:border-blue-500 border-green-500 border-2 outline-none mb-3"
               type="text"
               placeholder="Type to Search Question"
               value={input}
