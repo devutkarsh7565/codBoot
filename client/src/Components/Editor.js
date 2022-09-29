@@ -48,7 +48,7 @@ const Editor = () => {
   return (
     <>
       <div className="w-full">
-        <div className="flex justify-between items-center px-3 h-12 w-full">
+        <div className="flex justify-between items-center flex-wrap sm:flex-nowrap sm:gap-0 gap-6 px-3 h-12 w-full">
           <div className="sm:w-1/2 w-full">
             {" "}
             <input
@@ -58,7 +58,7 @@ const Editor = () => {
               onKeyDown={handleKeyDown}
             />
           </div>
-          <div className="flex justify-start items-center text-white sm:w-1/2 w-full">
+          <div className="flex justify-end items-center text-white sm:w-1/2 w-full ">
             {tags.map((tag, index) => (
               <div
                 className="flex justify-start items-center mx-1 py-2 px-3 rounded-md border-2 border-green-700 dark:border-blue-600  text-xl font-light text-green-500 dark:text-blue-500"
@@ -73,9 +73,9 @@ const Editor = () => {
             ))}
           </div>
         </div>
-        <div className="mt-8">
+        <div className="sm:mt-8 mt-16 pt-5">
           {" "}
-          <div className="my-2">
+          <div className="sm:my-2 mb-1">
             {" "}
             <dark-mode
               onclick={handleClick}
