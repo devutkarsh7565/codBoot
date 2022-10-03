@@ -94,10 +94,11 @@ const Editor = () => {
             style={{
               fontSize: 20,
               backgroundColor: { color },
+              overflowY: "scroll",
               fontFamily:
                 "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
             }}
-            className="w-full h-[25rem] rounded-xl border-green-500 border-2 mb-3"
+            className="w-full h-[25rem]  rounded-xl border-green-500 border-2 mb-3"
           />{" "}
         </div>
       </div>
