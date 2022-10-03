@@ -40,10 +40,10 @@ const Login = () => {
   };
   return (
     <>
-      <div className="h-screen w-full  flex flex-col justify-center items-center py-6 sm:py-12 ">
+      <div className="h-screen w-full  flex flex-col justify-center items-center xs:py-6 py-3 sm:py-12 ">
         <div className="py-3 md:w-1/2 sm:w-96 w-80 sm:mx-auto text-center bg-[#232429] dark:bg-[#D2DAFF]  text-white h-[550px] border-[1px] border-green-500 dark:border-none drop-shadow-xl rounded-lg">
           <div className="flex flex-col justify-start py-8 gap-6 items-center w-full">
-            <h1 className="text-white dark:text-[#6F7684] text-2xl">
+            <h1 className="text-white dark:text-[#6F7684] sm:text-2xl text-xl">
               REGISTER YOUR ACCOUNT
             </h1>
             <div className="flex flex-col justify-start items-start gap-[6px] pt-4 pb-2 w-4/5 dark:text-[#6F7684]">

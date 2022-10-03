@@ -13,16 +13,16 @@ const LandingPageAbout = () => {
     <>
       <div
         id="landingPage"
-        className="flex flex-col justify-start gap-5 items-center min-h-screen w-full my-8 py-8 "
+        className="flex flex-col justify-start gap-5 items-center min-h-screen w-full my-8 py-8 relative "
       >
-        <h1 className="text-4xl text-white mt-16 dark:text-[#6F7684] pt-8">
+        <h1 className="text-5xl text-white mt-16 dark:text-[#6F7684] pt-8 lg:absolute top-[-50px]">
           Why Use{" "}
-          <span className="text-green-500 dark:text-blue-500 text-5xl">
+          <span className="text-green-500 dark:text-blue-500 text-6xl">
             CodeX
           </span>{" "}
         </h1>
-        <div className="flex lg:justify-between  flex-wrap-reverse justify-center items-center text-white text-3xl w-full h-full">
-          <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5  flex items-center">
+        <div className="flex lg:justify-between  flex-wrap-reverse md:flex-nowrap justify-center items-center text-white text-3xl w-full h-full">
+          <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5  flex items-center h-[256px]">
             <p className="dark:text-[#6F7684]">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
               voluptas autem corrupti fugiat esse animi iusto ipsam sit a
@@ -38,7 +38,7 @@ const LandingPageAbout = () => {
             )}
           </div>
         </div>
-        <div className="flex lg:justify-between justify-center items-center gap-16 my-4 flex-wrap text-white text-3xl w-full h-full">
+        <div className="flex lg:justify-between justify-center items-center lg:items-start gap-16 my-4 flex-wrap md:flex-nowrap text-white text-3xl w-full h-full">
           <div className="xl:w-[35rem] lg:w-[32rem] md:w-[22rem]">
             {/* <Lottie animationData={contestData} loop={true} /> */}
             {isDarkMode ? (
