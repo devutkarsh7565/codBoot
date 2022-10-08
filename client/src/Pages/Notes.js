@@ -25,7 +25,7 @@ const Notes = () => {
   } = useContext(FirestoreContext);
 
   useEffect(() => {
-    setLoading(false);
+    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);
