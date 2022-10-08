@@ -16,7 +16,7 @@ const io = new Server(server, {
   },
 });
 
-let APP_PORT = 10043;
+let APP_PORT = process.env.PORT || 10043;
 
 app.use(bodyParser.json());
 
