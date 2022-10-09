@@ -17,8 +17,8 @@ const LandingPageAbout = () => {
       >
         <h1 className="text-5xl text-white mt-16 dark:text-[#6F7684] pt-8 lg:absolute top-[-50px]">
           Why Use{" "}
-          <span className="text-green-500 dark:text-blue-500 text-6xl">
-            CodeX
+          <span className="text-green-500 dark:text-blue-500 text-6xl font-NavbarLink">
+            CodBOOT
           </span>{" "}
         </h1>
         <div className="flex lg:justify-between  flex-wrap-reverse md:flex-nowrap justify-center items-center text-white text-3xl w-full h-full">

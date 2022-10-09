@@ -18,8 +18,8 @@ const Navbar = () => {
           <div className="flex w-full md:justify-start justify-around items-center sm:px-auto py-5 text-4xl md:w-1/5 xl:mx-10  lg:text-5xl md:text-[30px] font-medium text-white dark:text-black font-NavbarLink md:border-none border-b border-green-500 dark:border-blue-500">
             <div className="w-1/2 md:w-full flex md:flex-none justify-start ">
               <Link to="/">
-                Code
-                <span className="text-[#22C55E] dark:text-blue-500 ">X</span>
+                Cod
+                <span className="text-[#22C55E] dark:text-blue-500 ">BOOT</span>
               </Link>
             </div>
             {/* toggle bar  */}
