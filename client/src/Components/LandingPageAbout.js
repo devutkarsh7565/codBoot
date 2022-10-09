@@ -24,9 +24,8 @@ const LandingPageAbout = () => {
         <div className="flex lg:justify-between  flex-wrap-reverse md:flex-nowrap justify-center items-center text-white text-3xl w-full h-full">
           <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5  flex items-center h-[256px]">
             <p className="dark:text-[#6F7684]">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              voluptas autem corrupti fugiat esse animi iusto ipsam sit a
-              labore?
+              The platform where you can make notes of your Coding and DSA
+              problems in the effective way.
             </p>
           </div>
           <div className=" xl:w-[35rem] lg:w-[32rem] md:w-[22rem] w-full">
@@ -53,9 +52,8 @@ const LandingPageAbout = () => {
           </div>
           <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5 dark:text-[#6F7684]">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              voluptas autem corrupti fugiat esse animi iusto ipsam sit a
-              labore?
+              You can add some custom tags in your Notes and also attach problem
+              url to it.
             </p>
           </div>
         </div>
