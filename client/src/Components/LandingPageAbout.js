@@ -23,7 +23,7 @@ const LandingPageAbout = () => {
         </h1>
         <div className="flex lg:justify-between  flex-wrap-reverse md:flex-nowrap justify-center items-center text-white text-3xl w-full h-full">
           <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5  flex items-center h-[256px]">
-            <p className="dark:text-[#6F7684]">
+            <p className="dark:text-[#6F7684] text-4xl font-NavbarLink leading-10">
               The platform where you can make notes of your Coding and DSA
               problems in the effective way.
             </p>
@@ -51,7 +51,7 @@ const LandingPageAbout = () => {
             )}
           </div>
           <div className="xl:w-[30rem] lg:w-[28rem] md:w-[22rem] mx-5 dark:text-[#6F7684]">
-            <p>
+            <p className="text-4xl font-NavbarLink leading-10">
               You can add some custom tags in your Notes and also attach problem
               url to it.
             </p>
