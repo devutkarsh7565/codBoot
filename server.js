@@ -11,14 +11,18 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
 
-let APP_PORT = 10043;
+let APP_PORT = process.env.PORT || 10043;
 
 app.use(bodyParser.json());
+
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("client/build"));
+}
 
 server.listen(APP_PORT, () => {
   console.log(`SERVER RUNNING ON PORT : ${APP_PORT}`);
