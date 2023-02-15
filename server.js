@@ -17,7 +17,6 @@ const io = new Server(server, {
 });
 
 let APP_PORT = process.env.PORT || 10043;
-
 app.use(bodyParser.json());
 
 if (process.env.NODE_ENV == "production") {
@@ -31,14 +30,14 @@ server.listen(APP_PORT, () => {
 app.post("/", (req, res) => {
   const data = req.body;
 
-  console.log(`Problem name: ${data.name}`);
-  console.log(`Problem group: ${data.group}`);
-  console.log("Full body:");
+  // console.log(`Problem name: ${data.name}`);
+  // console.log(`Problem group: ${data.group}`);
+  console.log("Full body: server side");
   console.log(JSON.stringify(data, null, 4));
   io.sockets.emit("send-new-problem", data);
   // res.setHeader("Content-Type", "application/json");
 
-  res.send(req.body);
+  // res.send(req.body);
 });
 
 io.on("connection", (socket) => {
